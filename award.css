@@ -1,0 +1,79 @@
+.content {
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: white; /* Grey text */
+  width: 80%; /* Full width */
+  margin-top: 30px;
+  margin: 0 auto; /* Center it */
+  
+}
+
+#myInput {
+  background: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0); 
+  background-position: 10px 12px; /* Position the search icon */
+  width: 90%; /* Full-width */
+  font-size: 25px; /* Increase font-size */
+  margin-bottom: 12px; /* Add some space below the input */
+  margin-top: 30px;
+  margin-left: 5%;
+  color: white;
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  font-size: 18px; /* Increase font-size */
+  margin-top: 20px;
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 15px; /* Add padding */
+  color: white;
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd; 
+  color: white;
+}
+
+#myTable .header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background: rgb(0, 0, 0, 0.3); 
+  color: white;
+}
+
+.footer {
+   bottom: 0;
+   width: 100%;
+   background-color: dimgrey;
+   height: 5vh;
+   opacity: 0.6;
+   color: white;
+   text-align: right;
+}
+
+#foot{
+     width: 20px; /* Full width */
+     height: 20px;
+}
+
+#from{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}

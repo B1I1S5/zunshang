@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="referrer" content="always" />
+<meta name="description" content="霍尊">
+<title>霍尊图片_百度百科</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="icon" sizes="any" mask href="//www.baidu.com/img/baidu.svg">
+
+<meta name="keywords" content="霍尊 霍尊_图片 百度百科 百科 baike 霍尊">
+<meta name="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+<meta itemprop="image" content="https://bkssl.bdimg.com/cms/static/baike.png">
+
+<!--[if lte IE 9]>
+<script>
+    (function() {
+      var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(","),
+        i = e.length;
+      while (i--) {
+        document.createElement(e[i]);
+      }
+    })();
+  </script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_d6885f2.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/component/userbar-n/userbar-n_78dab81.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/larkplayer/larkplayer_981c735.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-common/widget/lib/webuploader/webuploader_08d9db4.css"/><link rel="stylesheet" type="text/css" href="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_31255bb.css"/>    
+</head>
+<body class="w-small">
+
+
+<script>
+        var imageResize = function(event) {
+            var picture = document.getElementById('imgPicture');
+            var parent = document.getElementById('picture');
+            var pHeight = document.body.clientHeight - 102;
+            parent.style.height = pHeight + 'px';
+            var rWidth = picture.width,
+                rHeight = picture.height,
+                pWidth = parent.offsetWidth;
+
+                var rateW = rWidth / pWidth,
+                    rateH = rHeight / pHeight;
+                var w = rWidth,
+                    h = rHeight;
+
+                if (rateW > 1 || rateH > 1) {
+                    if (rateW > rateH) {
+                        w = pWidth;
+                        h = rHeight / rateW;
+                    } else {
+                        h = pHeight;
+                        w = rWidth / rateH;
+                    }
+                }
+                        
+            picture.style.width = w + 'px';
+            picture.style.height = h + 'px';
+            picture.style.marginTop = (pHeight - h) / 2 + 'px';
+            picture.style.visibility = 'visible';
+        };
+
+        // 以下代码的功能是：在页面加载前，判断url中的对应值是否等于hash值，如不等，则改变url重新加载
+        // 添加代码原因：
+        //     1) 之前的代码逻辑是：url会具体指定到某张图片，前端在｀切换相册｀时，使用ajax获取数据，并不断更新hash值，但当用户
+        //        ｀刷新页面｀或｀点击返回词条按钮｀然后再｀点击浏览器后退键｀时，uri中的url和hash值不同，源代码会出现bug,导致
+        //        '上／下一图册'，'向上／下箭头'点击无效（具体原因请view代码）
+        //     2) hash值的使用无意义，页面刷新后并不能让用户回到之前访问的图片/图册
+        // 故作此修改。
+        // 个人认为比较合适的解决方法是：
+        //     1）图册页的图片数据是后端同步打过来的。在词条页面中，图册url不要具体到某张图片，到图册即可，由前端使用hash值加上
+        //        smarty的方法来控制具体到哪张图片，在切换图册时，刷新浏览器，改变url。
+        //     2) 图册页不需要同步的图片数据，全部由前端根据uri利用ajax获取。
+        // COMMENT BY YUHUI
+
+
+        //在此处不知道怎么使用require，所以自己写了一个将hash值转换为对象的函数
+        //另外，在 wiki-common:widget/util/url.js 下有url相关函数
+        //eg: hashStr = '#aid=19973219&pic=f7' => hashObj = {aid: '19973219', pic: 'f7'};
+        //COMMENT BY YUHUI
+        function makeHashIntoObj (hashStr) {
+            if (hashStr[0] === '#') {
+                hashStr = hashStr.substr(1);
+            }
+            var hashObj = {};
+            var hashArr = hashStr.split('&');
+            var tempArr = [];
+            for (var i = 0; i < hashArr.length; i++) {
+                tempArr = hashArr[i].split('=');
+                hashObj[tempArr[0]] = tempArr[1];
+            }
+            return hashObj;
+        }
+        // locationArr = ['', 'pic', $lemmaTitle, $newLemmaId, albumId, picSign];
+        var locationArr = window.location.pathname.split('/');
+        var hashObj = makeHashIntoObj(window.location.hash);
+        var picSign = locationArr[locationArr.length - 1];
+        var albumId = locationArr[locationArr.length - 2];
+        var picSignInHash = hashObj['pic'];
+        var albumIdInHash = hashObj['aid'];
+        if (!!picSignInHash && !!albumIdInHash && !!picSign && !!albumId) {
+            if (picSign != picSignInHash || albumId != albumIdInHash) {
+                locationArr[locationArr.length - 1] = picSignInHash;
+                locationArr[locationArr.length - 2] = albumIdInHash;
+                window.location.pathname = locationArr.join('/');
+            }
+        }
+    </script>
+
+
+<div id="picture-dialog" class="picture-dialog">
+<div class="header">
+<a class="logo" target="_blank" href="/">
+<span class="cmn-baike-logo white"><em class="cmn-icon cmn-icons cmn-icons_logo-bai"></em><em class="cmn-icon cmn-icons cmn-icons_logo-du"></em><em class="cmn-icon cmn-icons cmn-icons_logo-baike"></em></span>
+</a>
+<div class="breadcrumb">
+<a target="_blank" class="album-name" href="/pic/%E9%9C%8D%E5%B0%8A/8787306">霍尊图册</a>&nbsp;>&nbsp;<span class="album-desc">霍尊</span>
+</div>
+<a class="return-back" href="/item/%E9%9C%8D%E5%B0%8A/8787306">返回词条</a>
+<div style="clear: both"></div>
+</div>
+<div class="thumbnail" style="z-index: 2; width: 80px; top: 50%; margin-top: -269.5px; right: 12.5%; margin-right: -80px">
+<a class="prev-album" data-album="21278001"></a>
+<div class="pic-slider">
+<div class="prev-pic"></div>
+<div class="pic-scroller">
+<div class="pic-list">
+
+<a class="pic-item selected" title="霍尊" data-index="0" data-sign="8b13632762d0f7032de8c84701fa513d2797c5d7" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/8b13632762d0f7032de8c84701fa513d2797c5d7">
+<img src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D150/sign=ffceea8dc6fc1e17fdbf88347a91f67c/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg" alt="霍尊" style="display: block;width:142px;height:80px;top:0px;left:-31px;">
+<div class="seleced-cover"></div>
+</a>
+
+<a class="pic-item " title="霍尊" data-index="1" data-sign="f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a">
+<img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=68312b74ed1190ef1efb96d9fe1a9df7/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg" alt="霍尊" style="display: block;width:80px;height:120px;top:0px;left:0px;">
+</a>
+
+<a class="pic-item " title="拍摄者：仟玖零_1900" data-index="2" data-sign="a8014c086e061d95424ccca171f40ad162d9ca25" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/a8014c086e061d95424ccca171f40ad162d9ca25">
+<img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D150/sign=ec388552f1edab64747249c5c737af81/a8014c086e061d95424ccca171f40ad162d9ca25.jpg" alt="拍摄者：仟玖零_1900" style="display: block;width:120px;height:80px;top:0px;left:-20px;">
+</a>
+
+<a class="pic-item " title="拍摄者：仟玖零_1900" data-index="3" data-sign="c8ea15ce36d3d539347ef45a3087e950342ab0ec" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/c8ea15ce36d3d539347ef45a3087e950342ab0ec">
+<img src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D150/sign=e159ac79fd03918fd7d139cf613c264b/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg" alt="拍摄者：仟玖零_1900" style="display: block;width:120px;height:80px;top:0px;left:-20px;">
+</a>
+
+<a class="pic-item " title="霍尊" data-index="4" data-sign="95eef01f3a292df55f11578cb6315c6035a8735d" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/95eef01f3a292df55f11578cb6315c6035a8735d">
+<img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D150/sign=dad7c27e9b2397ddd6799c016980b216/95eef01f3a292df55f11578cb6315c6035a8735d.jpg" alt="霍尊" style="display: block;width:105px;height:80px;top:0px;left:-12px;">
+</a>
+
+<a class="pic-item " title="霍尊" data-index="5" data-sign="6a63f6246b600c33f6c62551104c510fd8f9a1e8" href="/pic/%E9%9C%8D%E5%B0%8A/8787306/21280018/6a63f6246b600c33f6c62551104c510fd8f9a1e8">
+<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D160/sign=899b48b13c7adab422d01f45bbd5b36b/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg" alt="霍尊" style="display: block;width:80px;height:139px;top:0px;left:0px;">
+</a>
+</div>
+</div>
+<div class="next-pic"></div>
+</div>
+<a class="next-album" data-album="21280020" title="霍尊生活照">
+<img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D290/sign=7a9921b204f41bd5de53effd61db81a0/1f178a82b9014a90f1848024a3773912b21beef5.jpg" alt="霍尊生活照"/>
+<span>下一图册</span>
+</a>
+<div class="bottom"></div>
+</div>
+<div class="picture-wrap">
+
+<div id="picture" class="picture" style="left:14.5%; top:62px; width:71%; height:600px">
+<img id="imgPicture" src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=cca8536c963df8dcb23087c3ac7819ee/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg" onload="imageResize()" style="visibility:hidden"/>
+<div id="picture-msg-tip" class="msg-tip yahei" style="display:none">
+<a class="close"></a>
+<span class="msg-tip-text"></span>
+</div>
+</div>
+</div>
+<div class="picture-footer yahei">
+<div class="footer-wrap" style="width:1000px; left:50%; margin-left:-500px">
+<div class="description">
+<span class="number">
+<span style="color:#b9bbbf">1</span>/<span style="color:#427cb8">6</span>
+</span>
+<span class="text">霍尊</span>
+</div>
+<a class="tool-button doubt j-doubt-link" target="_blank" href="/wikiui/doubt?lemmaId=8787306&picUrl=https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%253Dbaike80%252C5%252C5%252C80%252C26/sign%3Dcca8536c963df8dcb23087c3ac7819ee/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg" nslog-type="10300106">质疑</a>
+<a class="tool-button info">信息</a>
+
+<a class="tool-button origin" target="_blanck" href="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=cca8536c963df8dcb23087c3ac7819ee/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg">原图</a>
+<div class="info-panel">
+<div class="image-size">
+<span>图片尺寸</span>
+<span class="size">560X315</span>
+</div>
+<div class="album-info">
+<span class="from-text">来自</span>
+<span class="album-text">
+<a class="lemma-name" target="_blank" href="/item/%E9%9C%8D%E5%B0%8A/8787306">
+霍尊词条</a>-<a class="album-name" target="_blank" href="/pic/%E9%9C%8D%E5%B0%8A/8787306">霍尊</a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    //科学百科任务的词条所有提交,需要自动审核对其做忽略处理. 所以删除图片/绿色通道等规则也不适用于这类词条, 所以把它置顶处理
+    
+</body><script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/js/mod_4302fe0.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-common/pkg/wiki-common-base_c45f568.js"></script>
+<script type="text/javascript" src="https://bkssl.bdimg.com/static/wiki-album/pkg/wiki-album-picture_2a8a9c0.js"></script>
+<script type="text/javascript">!function(){        var $ = require('wiki-common:widget/lib/jquery/jquery.js'),
+            urlExt = require('wiki-common:widget/util/url.js'),
+            nslog = require("wiki-common:widget/component/nslog/nslog.js"),
+            PictureDialog = require('wiki-album:widget/picture/pictureDialog/pictureDialog.js');
+        
+        // 百科质疑，增加质疑入口--当前页面链接
+        // var doubtLink = $('.j-doubt-link').attr('href') + '&albumUrl=' + window.location.href;
+        // $('.j-doubt-link').attr('href', doubtLink);
+
+
+        var hash = window.location.hash.substr(1);
+        var albumId = urlExt.getQuery('aid', hash);
+        var pictureSign = urlExt.getQuery('pic', hash);
+        var useHash = !!albumId && albumId != '' && !!pictureSign && pictureSign != '';
+        albumId = useHash ? albumId : '21280018';
+        pictureSign = useHash ? pictureSign : '8b13632762d0f7032de8c84701fa513d2797c5d7';
+
+        var pageAlbumId = "21280018";
+        var pagePicSign = "8b13632762d0f7032de8c84701fa513d2797c5d7";
+
+        var useHash = (!!albumId && albumId != "") && (!!pictureSign && pictureSign != "" && pictureSign != pagePicSign);
+        if (useHash) {
+                            window.location.href = '/pic/%E9%9C%8D%E5%B0%8A/8787306/' +albumId+ '/' + pictureSign;
+                    }
+
+        PictureDialog.getInstance().show({
+            albums: {"11637437":{"desc":"\u970d\u5c0a\u4e0e\u5bb6\u4eba","coverpic":"6c224f4a20a44623349564fb9222720e0df3d7c8","coverwidth":162,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=8e7944f8f21986184547e88d7aec2e69\/6c224f4a20a44623349564fb9222720e0df3d7c8.jpg","total":20,"sign":11637437,"next":20588160,"prev":0},"20588160":{"desc":"2016.9.3\u970d\u5c0a\u5317\u4eac\u6f14\u5531\u4f1a","coverpic":"faedab64034f78f007e8536a73310a55b2191c4c","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=4a7f31b8788b4710ca2ffac5f3cfc3b2\/faedab64034f78f007e8536a73310a55b2191c4c.jpg","total":28,"prev":11637437,"sign":20588160,"next":21272012},"21272012":{"desc":"\u970d\u5c0a\u7ae5\u5e74\u7167","coverpic":"b999a9014c086e065529c7d208087bf40bd1cba2","coverwidth":220,"coverheight":143,"coverurl":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=99afbe5988025aafd73279c2cbecab8d\/b999a9014c086e065529c7d208087bf40bd1cba2.jpg","total":12,"prev":20588160,"sign":21272012,"next":21275128},"21275128":{"desc":"\u970d\u5c0a\u4e0e\u4e50\u4e50\u5199\u771f\u96c6\uff08THINKADOPTION\uff09","coverpic":"aa18972bd40735fa059c8e2094510fb30f24083f","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss3.bdstatic.com\/-Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=61da53b7a2d3fd1f3209a533004f25ce\/aa18972bd40735fa059c8e2094510fb30f24083f.jpg","total":12,"prev":21272012,"sign":21275128,"next":21277996},"21277996":{"desc":"\u970d\u5c0a\u53e4\u5178\u98ce\u683c\u5199\u771f","coverpic":"f3d3572c11dfa9ecc8c9be8e68d0f703908fc140","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=b5ec726a73310a55c024d9fd87444387\/f3d3572c11dfa9ecc8c9be8e68d0f703908fc140.jpg","total":11,"prev":21275128,"sign":21277996,"next":21277997},"21277997":{"desc":"\u970d\u5c0a\u73b0\u4ee3\u98ce\u683c\u5199\u771f","coverpic":"838ba61ea8d3fd1f8dd14aa33a4e251f94ca5f4b","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=fa34f287b3389b503cffe75bb537e5f1\/838ba61ea8d3fd1f8dd14aa33a4e251f94ca5f4b.jpg","total":9,"prev":21277996,"sign":21277997,"next":21277998},"21277998":{"desc":"\u300a\u5510\u8bd7\u300b\u5ba3\u4f20\u7167","coverpic":"f31fbe096b63f6243423d29a8d44ebf81a4ca329","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=d895f9d6942f07085b052d09d925b865\/f31fbe096b63f6243423d29a8d44ebf81a4ca329.jpg","total":17,"prev":21277997,"sign":21277998,"next":21277999},"21277999":{"desc":"\u970d\u5c0a\u65e9\u671f\u5199\u771f","coverpic":"d31b0ef41bd5ad6e330f8f738bcb39dbb7fd3cb1","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=7c930fa0b9de9c82a265fe865c8080d2\/d31b0ef41bd5ad6e330f8f738bcb39dbb7fd3cb1.jpg","total":20,"prev":21277998,"sign":21277999,"next":21278000},"21278000":{"desc":"\u970d\u5c0a\u4e0e\u6bcd\u4eb2\u4eb2\u5b50\u5199\u771f\u96c6","coverpic":"f703738da9773912ac646ff8f2198618377ae2ed","coverwidth":151,"coverheight":220,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=b211026d5bda81cb4ae684c46267d0a4\/f703738da9773912ac646ff8f2198618377ae2ed.jpg","total":24,"prev":21277999,"sign":21278000,"next":21278001},"21278001":{"desc":"\u970d\u5c0a\u6f2b\u753b\u5f62\u8c61","coverpic":"8ad4b31c8701a18bf14eb2ff972f07082938fedd","coverwidth":155,"coverheight":220,"coverurl":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=4362734d72899e517c8e3d1d72a6d990\/8ad4b31c8701a18bf14eb2ff972f07082938fedd.jpg","total":13,"prev":21278000,"sign":21278001,"next":21280018},"21280018":{"desc":"\u970d\u5c0a","coverpic":"8b13632762d0f7032de8c84701fa513d2797c5d7","coverwidth":220,"coverheight":123,"pictures":[{"src":"8b13632762d0f7032de8c84701fa513d2797c5d7","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u970d\u5c0a","height":315,"width":560,"picId":41530451900,"type":{"view":220,"albumview":120,"oriWithWater":561,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=0f7e836fbe4543a9f11bfdce2e168a7b\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":220,"height":123,"size":220},"120":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D120\/sign=3e653204ad0f4bfb93d09a56334e788f\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":213,"height":120,"size":120},"561":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike80%2C5%2C5%2C80%2C26\/sign=cca8536c963df8dcb23087c3ac7819ee\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":560,"height":315,"size":561},"200":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=0f7e836fbe4543a9f11bfdcc2e168a7b\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":200,"height":112,"size":200},"150":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D150\/sign=ffceea8dc6fc1e17fdbf88347a91f67c\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":150,"height":84,"size":150},"209":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=8575dbb0b951f819f125044ae3b54a76\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":209,"height":117,"size":209},"268":{"url":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=151051b9ba1bb0518f24b42e0e7bda77\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","width":268,"height":150,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":1},{"src":"f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u970d\u5c0a","height":2048,"width":1365,"picId":45798524141,"type":{"view":220,"albumview":160,"oriWithWater":2049,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=61505a47fa1f3a295ec8d2cca924bce3\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":146,"height":220,"size":220},"160":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D160\/sign=d72de35ceafe9925cb0c6d5604a95ee4\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":160,"height":240,"size":160},"2049":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike272%2C5%2C5%2C272%2C90\/sign=5eda522bdb58ccbf0fb1bd6878b1d75b\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":1365,"height":2048,"size":2049},"200":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=61505a47fa1f3a295ec8d2cea924bce3\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":133,"height":200,"size":200},"150":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=68312b74ed1190ef1efb96d9fe1a9df7\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":106,"height":160,"size":150},"209":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=a450c78ad754564ee565e3398adf9cde\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":209,"height":313,"size":209},"268":{"url":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=261787fd0323dd542173a06ee908b3df\/f9dcd100baa1cd119f8f89b9b312c8fcc3ce2d6a.jpg","width":268,"height":402,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":2},{"src":"a8014c086e061d95424ccca171f40ad162d9ca25","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u62cd\u6444\u8005\uff1a\u4edf\u7396\u96f6_1900","height":1787,"width":2680,"picId":45798537032,"type":{"view":220,"albumview":120,"oriWithWater":2681,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=3bc74cab50afa40f38c6c9df9b65038c\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":220,"height":146,"size":220},"120":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D120\/sign=7dcd286471899e51678e3e1672a6d990\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":179,"height":120,"size":120},"2681":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike272%2C5%2C5%2C272%2C90\/sign=5620442bb3014a9095334eefc81e5277\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":2680,"height":1787,"size":2681},"200":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=3bc74cab50afa40f38c6c9dd9b65038c\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":200,"height":133,"size":200},"150":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D150\/sign=ec388552f1edab64747249c5c737af81\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":150,"height":100,"size":150},"209":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=fb2e256dbd4543a9f51bfdcc27168a7b\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":209,"height":139,"size":209},"268":{"url":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=42627db0e1c4b7453494b010f7fd1e78\/a8014c086e061d95424ccca171f40ad162d9ca25.jpg","width":268,"height":178,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":3},{"src":"c8ea15ce36d3d539347ef45a3087e950342ab0ec","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u62cd\u6444\u8005\uff1a\u4edf\u7396\u96f6_1900","height":3648,"width":5472,"picId":45798555266,"type":{"view":220,"albumview":120,"oriWithWater":5473,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=93a167458013632711edc531a18ea056\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":220,"height":146,"size":220},"120":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D120\/sign=3ae767a846086e0675a83b4932097b5a\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":180,"height":120,"size":120},"5473":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike933%2C5%2C5%2C933%2C330\/sign=2ed1e074a9cc7cd9ee203c8b58684a5a\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":5472,"height":3648,"size":5473},"200":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=93a167458013632711edc533a18ea056\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":200,"height":133,"size":200},"150":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D150\/sign=e159ac79fd03918fd7d139cf613c264b\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":150,"height":100,"size":150},"209":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=d7857c5249166d22387712947f220945\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":209,"height":139,"size":209},"268":{"url":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=bf139b52b8fb43161a1f7d7c18a54642\/c8ea15ce36d3d539347ef45a3087e950342ab0ec.jpg","width":268,"height":178,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":4},{"src":"95eef01f3a292df55f11578cb6315c6035a8735d","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u970d\u5c0a","height":1301,"width":1705,"picId":45798584255,"type":{"view":220,"albumview":200,"oriWithWater":1706,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=2cfc7ed7c08065387feaa311a7dfa115\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":220,"height":167,"size":220},"200":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=2cfc7ed7c08065387feaa313a7dfa115\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":200,"height":152,"size":200},"1706":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike220%2C5%2C5%2C220%2C73\/sign=8e4205467c094b36cf9f13bfc2a517bc\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":1705,"height":1301,"size":1706},"150":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D150\/sign=dad7c27e9b2397ddd6799c016980b216\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":150,"height":114,"size":150},"209":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=8e4205467c094b36db921ced9ace7c00\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":209,"height":159,"size":209},"268":{"url":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=b31bff04c1ef76093c0b9e9916dfa301\/95eef01f3a292df55f11578cb6315c6035a8735d.jpg","width":268,"height":204,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":5},{"src":"6a63f6246b600c33f6c62551104c510fd8f9a1e8","owner":"\u96ea\u5730\u91cc\u7684\u4e00\u53ea\u72fc","desc":"\u970d\u5c0a","height":2002,"width":1160,"picId":45798556273,"type":{"view":220,"albumview":160,"oriWithWater":2003,"litterImage":200,"authModule":150,"view_new":209,"view_card":268},"sizes":{"220":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D220\/sign=efadc9a122381f309a198aab99004c67\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":127,"height":220,"size":220},"160":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D160\/sign=6eb2278db299a9013b355f302d940a58\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":160,"height":276,"size":160},"2003":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/c0%3Dbaike220%2C5%2C5%2C220%2C73\/sign=7b53ac70f8d3572c72ef948eeb7a0842\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":1160,"height":2002,"size":2003},"200":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D200\/sign=efadc9a122381f309a198aa999004c67\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":115,"height":200,"size":200},"150":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/h%3D160\/sign=899b48b13c7adab422d01f45bbd5b36b\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":92,"height":160,"size":150},"209":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D209\/sign=7b53ac70f8d3572c66e29bdcb3126352\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":209,"height":360,"size":209},"268":{"url":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/w%3D268\/sign=0a76c47868d9f2d3201123e991ed8a53\/6a63f6246b600c33f6c62551104c510fd8f9a1e8.jpg","width":268,"height":462,"size":268}},"aid":21280018,"albumDesc":"\u970d\u5c0a","index":6}],"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=0f7e836fbe4543a9f11bfdc52e168a7b\/8b13632762d0f7032de8c84701fa513d2797c5d7.jpg","total":6,"prev":21278001,"sign":21280018,"next":21280020},"21280020":{"desc":"\u970d\u5c0a\u751f\u6d3b\u7167","coverpic":"1f178a82b9014a90f1848024a3773912b21beef5","coverwidth":168,"coverheight":220,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=7a9921b204f41bd5de53effd61db81a0\/1f178a82b9014a90f1848024a3773912b21beef5.jpg","total":42,"prev":21280018,"sign":21280020,"next":21280022},"21280022":{"desc":"2014\u970d\u5c0a\u7ea2\u725b\u4e0d\u63d2\u7535\u6f14\u5531\u4f1a","coverpic":"2e2eb9389b504fc2c960e5b4ecdde71190ef6d47","coverwidth":220,"coverheight":152,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=3436541a0a3b5bb5bad727f706d3d523\/2e2eb9389b504fc2c960e5b4ecdde71190ef6d47.jpg","total":13,"prev":21280020,"sign":21280022,"next":21280023},"21280023":{"desc":"2016.5.21\u970d\u5c0a\u4e0a\u6d77\u6f14\u5531\u4f1a","coverpic":"8694a4c27d1ed21b6b5e7e54a46eddc450da3fef","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=6c89b8d55f4e9258a23481e7ac83d1d1\/8694a4c27d1ed21b6b5e7e54a46eddc450da3fef.jpg","total":7,"prev":21280022,"sign":21280023,"next":21280515},"21280515":{"desc":"\u300a\u98ce\u5c1a\u5fd7\u300b\u6742\u5fd7\u5199\u771f","coverpic":"e7cd7b899e510fb3a6d77625d033c895d0430cb1","coverwidth":164,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=e8c7a388394e251fe6f7e3f19787c9c2\/e7cd7b899e510fb3a6d77625d033c895d0430cb1.jpg","total":7,"prev":21280023,"sign":21280515,"next":21280734},"21280734":{"desc":"\u970d\u5c0a\u53c2\u52a0\u516c\u76ca\u6d3b\u52a8","coverpic":"cb8065380cd791238358ecc6a4345982b3b780c3","coverwidth":220,"coverheight":147,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=79a702c829a446237acaa26ba8237246\/cb8065380cd791238358ecc6a4345982b3b780c3.jpg","total":5,"prev":21280515,"sign":21280734,"next":21295065},"21295065":{"desc":"2012\u970d\u5c0a\u53c2\u52a0\u300a\u58f0\u52a8\u4e9a\u6d32\u300b","coverpic":"9a504fc2d56285359a80189b99ef76c6a7ef632c","coverwidth":151,"coverheight":220,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=7c66a43fc0ea15ce45eee70086013a25\/9a504fc2d56285359a80189b99ef76c6a7ef632c.jpg","total":10,"prev":21280734,"sign":21295065,"next":21295067},"21295067":{"desc":"2017\u970d\u5c0a\u53c2\u52a0\u300a\u5389\u5bb3\u4e86\uff01\u6211\u7684\u6b4c\u300b","coverpic":"5fdf8db1cb13495494fe24fd5c4e9258d0094a43","coverwidth":155,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=c45f4b1edaa20cf44290f9d646084b0c\/5fdf8db1cb13495494fe24fd5c4e9258d0094a43.jpg","total":9,"prev":21295065,"sign":21295067,"next":21295068},"21295068":{"desc":"2016\u970d\u5c0a\u53c2\u52a0\u300a\u53ee\u54af\u5499\u549a\u545b\u7b2c\u4e8c\u5b63\u300b","coverpic":"83025aafa40f4bfb173256ee0a4f78f0f63618ae","coverwidth":149,"coverheight":220,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=d71862b7f1dcd100c99cff28428a47be\/83025aafa40f4bfb173256ee0a4f78f0f63618ae.jpg","total":8,"prev":21295067,"sign":21295068,"next":22112984},"22112984":{"desc":"\u970d\u5c0a\u5728\u300a\u82b1\u843d\u68a6\u6df1\u5904\u300b\u4e2d\u9970\u6f14\u4e0a\u675f\u6b49","coverpic":"a8773912b31bb05177baf7893c7adab44bede0f1","coverwidth":220,"coverheight":165,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=de79f05a33dbb6fd215be22f3925aba6\/a8773912b31bb05177baf7893c7adab44bede0f1.jpg","total":17,"prev":21295068,"sign":22112984,"next":22113095},"22113095":{"desc":"\u4e3a\u821e\u5267\u300a\u6885\u5170\u82b3\u300b\u732e\u5531\u4e3b\u9898\u66f2\u300a\u82b1\u96c5\u7985\u300b","coverpic":"b58f8c5494eef01f3eeaaa64eafe9925bd317d90","coverwidth":220,"coverheight":165,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=ff3135809913b07eb9bd57013cd69113\/b58f8c5494eef01f3eeaaa64eafe9925bd317d90.jpg","total":9,"prev":22112984,"sign":22113095,"next":22113098},"22113098":{"desc":"\u970d\u5c0a\u51fa\u6f14\u97f3\u4e50\u516c\u8def\u7535\u5f71\u300a\u6211\u548c\u8fd9\u4e2a\u4e16\u754c\u4e0d\u719f\u300b","coverpic":"6609c93d70cf3bc7dcf78b4ddb00baa1cc112a9f","coverwidth":220,"coverheight":165,"coverurl":"https:\/\/gss3.bdstatic.com\/-Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=dedc8e6ba551f3dec7b2be6da4eff0ec\/6609c93d70cf3bc7dcf78b4ddb00baa1cc112a9f.jpg","total":33,"prev":22113095,"sign":22113098,"next":22113099},"22113099":{"desc":"\u970d\u5c0a\u5728\u300a\u80a1\u75af2015\u300b\u4e2d\u9970\u6f14\u8463\u8fdb","coverpic":"caef76094b36acafd726d05d76d98d1000e99c49","coverwidth":220,"coverheight":165,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=0be4cd986163f624185d3e0ab746eb32\/caef76094b36acafd726d05d76d98d1000e99c49.jpg","total":6,"prev":22113098,"sign":22113099,"next":22191286},"22191286":{"desc":"\u970d\u5c0a\u6f14\u51fa\u7167","coverpic":"f3d3572c11dfa9ecda0dac8e68d0f703918fc10c","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss0.bdstatic.com\/94o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=a728606a73310a55c024d9fd87444387\/f3d3572c11dfa9ecda0dac8e68d0f703918fc10c.jpg","total":77,"prev":22113099,"sign":22191286,"next":22191287},"22191287":{"desc":"\u300a\u5929\u97f5\u00b7\u970d\u5c0a\u300b\u4e13\u8f91\u7cfb\u5217\u5199\u771f","coverpic":"94cad1c8a786c917a3e6b2a0c33d70cf3ac75746","coverwidth":149,"coverheight":220,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=3bc945467cc6a7efbd26af2fcdfbafe9\/94cad1c8a786c917a3e6b2a0c33d70cf3ac75746.jpg","total":22,"prev":22191286,"sign":22191287,"next":22191288},"22191288":{"desc":"\u970d\u5c0a\u6d3b\u52a8\u7167","coverpic":"c995d143ad4bd1137e3154ab50afa40f4afb05ae","coverwidth":146,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=c4d6a9976d09c93d03f209feaf3cf8bb\/c995d143ad4bd1137e3154ab50afa40f4afb05ae.jpg","total":53,"prev":22191287,"sign":22191288,"next":22191289},"22191289":{"desc":"\u970d\u5c0a\u5e55\u540e\u7167","coverpic":"0824ab18972bd407c8863c6471899e510eb309e2","coverwidth":154,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/-vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=ce865822ac1ea8d38e22730da70b30cf\/0824ab18972bd407c8863c6471899e510eb309e2.jpg","total":11,"prev":22191288,"sign":22191289,"next":22191290},"22191290":{"desc":"\u970d\u5c0a\u53c2\u52a0\u7231\u5fc3\u652f\u6559","coverpic":"b812c8fcc3cec3fd3dbf92efdc88d43f869427a2","coverwidth":220,"coverheight":165,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=5899bc9b566034a82de2bf88fb1249d9\/b812c8fcc3cec3fd3dbf92efdc88d43f869427a2.jpg","total":5,"prev":22191289,"sign":22191290,"next":22374121},"22374121":{"desc":"\u53c2\u8d5b\u300a\u56fd\u8272\u5929\u9999\u300b","coverpic":"2934349b033b5bb5b851ce273cd3d539b700bc61","coverwidth":220,"coverheight":164,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=7b6ab930f8d3572c62e29bd5ba116352\/2934349b033b5bb5b851ce273cd3d539b700bc61.jpg","total":30,"prev":22191290,"sign":22374121,"next":22374122},"22374122":{"desc":"\u300a\u559d\u5f69\u4e2d\u534e\u300b\u4efb\u89c2\u5bdf\u5458","coverpic":"3bf33a87e950352abd3bcad15943fbf2b3118b95","coverwidth":220,"coverheight":164,"coverurl":"https:\/\/gss3.bdstatic.com\/-Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=8c644b66aaec08fa220014ae69ef3d4d\/3bf33a87e950352abd3bcad15943fbf2b3118b95.jpg","total":16,"prev":22374121,"sign":22374122,"next":22375302},"22375302":{"desc":"\u90e8\u5206\u8363\u8a89\u8bb0\u5f55","coverpic":"30adcbef76094b36f5523c37a9cc7cd98c109d23","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=53bbe0f5b4096b63851959593c318733\/30adcbef76094b36f5523c37a9cc7cd98c109d23.jpg","total":15,"prev":22374122,"sign":22375302,"next":22521545},"22521545":{"desc":"\u8d74\u7f8e\u4ea4\u6d41","coverpic":"6609c93d70cf3bc739fff7f2da00baa1cd112a34","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=3bd4f2d4a451f3dec7b2be6da4eff0ec\/6609c93d70cf3bc739fff7f2da00baa1cd112a34.jpg","total":10,"prev":22375302,"sign":22521545,"next":23114835},"23114835":{"desc":"\u8e22\u9986\u300a\u6b4c\u624b2018\u300b","coverpic":"4b90f603738da977f53b9c33bc51f8198618e396","coverwidth":220,"coverheight":146,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=d7fc8246d1c451daf2f60be286fd52a5\/4b90f603738da977f53b9c33bc51f8198618e396.jpg","total":22,"prev":22521545,"sign":23114835,"next":23749795},"23749795":{"desc":"2018\u201c\u65b9\u7684\u89c6\u754c\u201d\u7cfb\u5217\u5199\u771f","coverpic":"a2cc7cd98d1001e90ecc1633b50e7bec54e7971d","coverwidth":220,"coverheight":162,"coverurl":"https:\/\/gss3.bdstatic.com\/7Po3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=3bfeb048e6f81a4c2232ebc0e72b6029\/a2cc7cd98d1001e90ecc1633b50e7bec54e7971d.jpg","total":16,"prev":23114835,"sign":23749795,"next":23750451},"23750451":{"desc":"2017\u300a\u8499\u9762\u5531\u5c06\u731c\u731c\u731c\u300b","coverpic":"359b033b5bb5c9eae1fc60dfd839b6003af3b3fb","coverwidth":157,"coverheight":220,"coverurl":"https:\/\/gss0.bdstatic.com\/-4o3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=96eba4df5a2c11dfdad1b82a53276255\/359b033b5bb5c9eae1fc60dfd839b6003af3b3fb.jpg","total":5,"prev":23749795,"sign":23750451,"next":23750452},"23750452":{"desc":"2018\u300a\u7ecf\u5178\u548f\u6d41\u4f20\u300b","coverpic":"b8014a90f603738d0b306e1ebe1bb051f819ec90","coverwidth":157,"coverheight":220,"coverurl":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=acb34cd9a06eddc422e7b3f209dbb6a2\/b8014a90f603738d0b306e1ebe1bb051f819ec90.jpg","total":6,"prev":23750451,"sign":23750452,"next":23750453},"23750453":{"desc":"2018\u8fbd\u89c6\u6625\u665a","coverpic":"b7fd5266d0160924d248cf27d90735fae6cd3498","coverwidth":157,"coverheight":220,"coverurl":"https:\/\/gss1.bdstatic.com\/9vo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=6088e432bc3533faf1b6942798d3fdca\/b7fd5266d0160924d248cf27d90735fae6cd3498.jpg","total":3,"prev":23750452,"sign":23750453,"next":23750454},"23750454":{"desc":"\u970d\u5c0a","coverpic":"f9198618367adab404ee9d6686d4b31c8701e4dd","coverwidth":157,"coverheight":220,"coverurl":"https:\/\/gss2.bdstatic.com\/-fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=1c6563030424ab18e416e63e05fae69a\/f9198618367adab404ee9d6686d4b31c8701e4dd.jpg","total":6,"prev":23750453,"sign":23750454,"next":0},"0":{"desc":"\u8bcd\u6761\u56fe\u7247","coverpic":"9e3df8dcd100baa1772876564110b912c9fc2ed2","coverwidth":493,"coverheight":493,"coverurl":"https:\/\/gss2.bdstatic.com\/9fo3dSag_xI4khGkpoWK1HF6hhy\/baike\/s%3D290\/sign=0eb6888992eef01f49141fccd0ff99e0\/9e3df8dcd100baa1772876564110b912c9fc2ed2.jpg","total":42,"prev":23750454,"sign":0,"next":11637437}},
+            lemmaId: '8962990',
+            subLemmaId: '8949509',
+            lemmaTitle: '霍尊',
+            newLemmaId: '8787306',
+            versionId: '',
+            commitId: '',
+            albumId: albumId,
+            picPageType: '0',
+            pictureSign: pictureSign,
+            lemmaName: '霍尊',
+            crumbClick: function() {
+                nslog(10000201);
+            },
+            pictureChanged: function(albumId, picSign) {
+                window.location.hash = 'aid=' + albumId + '&pic=' + picSign;
+                // 百科质疑入口变化逻辑
+                var doubtLink = '/wikiui/doubt?lemmaId='+ '8787306'
+                    + '&fr=albumPicture'
+                    + '&picUrl=' + $('.picture-footer .origin').attr('href')
+                    + '&albumUrl=' + window.location.origin + window.location.pathname;
+
+                $('.j-doubt-link').attr('href', doubtLink);
+            }
+        });    }();
+!function(){      require('wiki-common:widget/component/psLink/psLink');
+    }();
+!function(){      require('wiki-common:widget/component/recruitment/recruitment');
+    }();</script><script type="text/javascript">(new Image()).src="https://gsp0.baidu.com/5aAHeD3nKhI2p27j8IqW0jdnxx1xbK/tb/pms/img/st.gif?pid=242&v=2&fs=dd68578&otherStr=&page=wiki-album/page/picture/picture.tpl&sid=1546119190&hash=fdfb4bd739&fid=baike";</script></html>

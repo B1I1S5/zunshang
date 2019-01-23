@@ -1,0 +1,179 @@
+*
+{
+    margin : 0;
+    padding: 0;
+}
+
+header
+{   
+    background-color: dimgrey;
+    height: 12vh;
+    opacity: 0.6;
+}
+
+.main-nav
+{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li
+{
+    display: inline-block;
+}
+
+.main-nav li a
+{
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: "Roboto",sans-serif;
+    font-size: 18px;
+}
+
+.main-nav .active a
+{
+    border: 1px solid white;
+}
+
+.main-nav li a:hover
+{
+    border: 1px solid white;
+}
+
+.logo img
+{
+    width: 65px;
+    height: auto;
+    float: left;
+}
+
+body
+{
+    background-image:repeating-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(zunzun.jpg);
+    height: 180vh;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: monospace;
+}
+
+.row
+{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero
+{
+    position: absolute;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 90px;
+    text-align: center;
+    margin-top: 250px;
+    
+}
+
+.button
+{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn
+{
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.btn-one
+{
+    background-color: darkorange;
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-two
+{
+    font-family: "Roboto", sans-serif;
+}
+
+.btn-two:hover
+{
+    background-color: darkorange;
+    transition: all 0.5s ease-in;
+}
+
+
+.footer {
+   bottom: 0;
+   width: 100%;
+   background-color: dimgrey;
+   height: 5vh;
+   opacity: 0.6;
+   color: white;
+   text-align: right;
+}
+
+#foot{
+     width: 20px; /* Full width */
+     height: 20px;
+}
+
+#from{
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

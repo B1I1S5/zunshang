@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>HUOZUN FAN WEBSTE</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="song.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+    <header>
+    
+        <div class="row">
+            <div class="logo">
+            <img src="logo3.png">
+            </div>
+        <ul class="main-nav">
+            <li><a href="index.html"> 主页 </a></li>
+            <li><a href="intro.html"> 介绍 </a></li>
+            <li class="active"><a href="song.html"> 歌曲/作品 </a></li>
+            <li><a href="award.html"> 获奖记录 </a></li>
+            <li><a href="photo.html"> 百变尊尊 </a></li>
+        </ul>
+        </div>
+        
+    </header>
+    
+    
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('2018')"> 2018</button>
+      <button class="btn" onclick="filterSelection('2017')"> 2017</button>
+      <button class="btn" onclick="filterSelection('2016')"> 2016</button>
+      <button class="btn" onclick="filterSelection('2015')"> 2015</button>
+      <button class="btn" onclick="filterSelection('2014')"> 2014</button>
+      <button class="btn" onclick="filterSelection('2013')"> 2013</button>
+      <button class="btn" onclick="filterSelection('2012')"> 2012</button>
+    </div>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div id="pictures">
+    <div class="rows">
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://wx4.sinaimg.cn/mw690/7770d9a9ly1fyc12yl4eqj20rs0rs46d.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-12-18</h4>
+          <p>泽泊</p>
+          <p>专辑</p>
+          <p>《玩乐》</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4146081627,3835902571&fm=11&gp=0.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-12-04</h4>
+          <p>太极·禅</p>
+          <p>曲：霍尊</p>
+          <p>Rap：罗开元</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://00imgmini.eastday.com/mobile/20181121/20181121101450_cebac2aa38e1d18cb6aef8dd1872d16a_1.jpeg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-11-14</h4>
+          <p>湖山记 </p>
+          <p>（纪录片《西泠印社》之</p>
+          <p>《孤山路31号》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://www.gdongw.com/uploads/allimg/180928/10312331R-0.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-09-28</h4>
+          <p>九色鹿 （第三届丝绸之路</p>
+          <p>(敦煌)国际文化博览会）</p>
+          <p>“绝色敦煌之夜”主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://img.dpm.org.cn/Uploads/Picture/2016/12/29/s5864afa72c459.jpeg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-08-15</h4>
+          <p>韩熙载夜宴图 </p>
+          <p>（故宫“古画会唱歌”</p>
+          <p>活动创作曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://img4.imgtn.bdimg.com/it/u=486578753,752593367&fm=26&gp=0.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-08-03</h4>
+          <p>未摘花</p>
+          <p>第三届丝绸之路(敦煌)</p>
+          <p>国际文化博览会</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://www.banzous.com/data/attachment/forum/201812/13/090504aklp3il833nzkntz.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-08-01</h4>
+          <p>离人泪 </p>
+          <p>（手游《寻仙》</p>
+          <p>十周年主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="http://images.vrbeing.com/2018/0713/20180713033541663.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-07-10</h4>
+          <p>风语咒</p>
+          <p>（动画电影</p>
+          <p>《风语咒》同名主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546222111165&di=8c26df3f613695d954eaf4ae783fd9c8&imgtype=0&src=http%3A%2F%2Fwx1.sinaimg.cn%2Flarge%2F9b14baffly1fs3w3yqtv9j20dw0dwtac.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-05-29</h4>
+          <p>伶仃 </p>
+          <p>（合唱:</p>
+          <p>张力尹）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1388423276,352642647&fm=26&gp=0.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-03-23</h4>
+          <p>你好吗,少年</p>
+          <p>（《歌手2018》</p>
+          <p>终极补位赛歌曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546222433019&di=84eaa5ff7766285b95f10469039f5f82&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F61dd92b39597c707f5aaee931861895b012ef80d.png" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-03-02</h4>
+          <p>焚城雪 （电视剧</p>
+          <p>《人生若如初相见》</p>
+          <p>片头曲）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=c81d84f88dcb39dbd5cd6f04b17f6241/faedab64034f78f0e2ef7ae175310a55b3191c3f.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-03-08</h4>
+          <p>穿越吧!猛犸</p>
+          <p>(穿越次元</p>          
+          <p>黑童话系列)</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546222878994&di=bfea9eb5e68cea1b6275eaa7eda638a4&imgtype=0&src=http%3A%2F%2Fimage.uczzd.cn%2F8536577669793937945.jpg%3Fid%3D0" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-02-14</h4>
+          <p>渔舟唱晚</p>
+          <p>（2018辽宁卫视</p>
+          <p>春节联欢晚会演绎曲目）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546223027493&di=5691c90071e53711713b757eaeab670f&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2Fw1334h750%2F20180303%2F6c7e-fwnpcnt6453608.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-01-18</h4>
+          <p>一念花开 </p>
+          <p>（合唱:</p>
+          <p>李谷一）</p>
+        </div>
+      </div>
+      <div class="column 2018">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546223116992&di=a22c4244aecb6f22efc303d5b40b6c15&imgtype=0&src=http%3A%2F%2Fuploads.5068.com%2Fallimg%2F1802%2F173-1P226114326.jpg" alt="2018" style="width:auto; height:220px;">
+          <h4>2018-01-05</h4>
+          <p>少女与海</p>
+          <p>(霍尊作曲</p>
+          <p>甘世佳作词)</p>
+        </div>
+      </div>
+      
+    
+    
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546223993168&di=d9683522ab3664721e063f9c44dbe32c&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fent%2Ftransform%2F20171116%2FvYV8-fynwnwt7026552.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-11-03</h4>
+          <p>天地有灵</p>
+          <p>（电影《捉妖记2》</p>
+          <p>风云再起版推广曲）</p>
+        </div>
+      </div>
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546224146394&di=870d591cb076d8993b2cb105a325ebe5&imgtype=0&src=http%3A%2F%2Fwx2.sinaimg.cn%2Flarge%2F5c9d3a5dly1fkq8pbtg04j20ru0fo75o.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-10-13</h4>
+          <p>梨花颂</p>
+          <p>（经典京歌</p>
+          <p>翻唱）</p>
+        </div>
+      </div>
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546224287278&di=2d60ab21634874c010b4c1208a89fcf0&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F3945f99843e26c1c185f7e01761f3503cef45c55.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-08-07</h4>
+          <p>桃花雨</p>
+          <p>（电影《三生三世</p>
+          <p>十里桃花》片尾曲）</p>
+        </div>
+      </div>
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546224443600&di=213bc7dd72e99f04a578b8e79af4ee3a&imgtype=0&src=http%3A%2F%2Fimge.kugou.com%2Fstdmusic%2F20170602%2F20170602112759306294.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-06-02</h4>
+          <p>梦诛缘·夏聚</p>
+          <p>（手游《梦幻诛仙》</p>
+          <p>2017夏季主题曲,合唱:汪苏泷）</p>
+        </div>
+      </div>
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546819326&di=6699cc5f6e17e7baf0e4daac51dd833b&imgtype=jpg&er=1&src=http%3A%2F%2Fwx2.sinaimg.cn%2Flarge%2F443a53c9ly1feilgbx8w3j21kw0w075q.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-04-11</h4>
+          <p>粉墨</p>
+          <p>（电影</p>
+          <p>《花落梦深处》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2017">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546224778445&di=2be32591fc415b46b43d0836aa6c9a09&imgtype=0&src=http%3A%2F%2Fwww.ccsdj.com%2Fdata%2Fattachment%2Fforum%2F201703%2F02%2F194338csoriqfoo1inqgti.jpg" alt="2017" style="width:auto; height:220px;">
+          <h4>2017-03-02</h4>
+          <p>素颜</p>
+          <p>（电视剧</p>
+          <p>《大唐荣耀》插曲）</p>
+        </div>
+      </div>
+      
+      
+    
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225103255&di=6bac5d6874ab47dc1985a736537ba804&imgtype=0&src=http%3A%2F%2Fbbsfiles.vivo.com.cn%2Fvivobbs%2Fattachment%2Fforum%2F201702%2F03%2F160505fbtbmckyyrc0rfkf.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-12-12</h4>
+          <p>孤芳不自赏</p>
+          <p>（电视剧《孤芳不自赏》</p>
+          <p>同名主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225174439&di=79172764bd18edaf01790407224b0019&imgtype=0&src=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F21a3a9fb3060327311cc0f812acede798365b363.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-07-14</h4>
+          <p>离思</p>
+          <p>（电视剧</p>
+          <p>《青云志》插曲）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225325534&di=4fa7565d8454607344fe5cec770f2e95&imgtype=0&src=http%3A%2F%2Fimg.sfw.cn%2Fadmin%2Fw%2Fnews%2Fuploadfile%2F20160623%2F20160623120051869%2F2016062304034156936.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-06-17</h4>
+          <p>时光不忘 </p>
+          <p>（《QQ三国》</p>
+          <p>游戏九周年庆主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225498216&di=b0244034c106c14c4d9d5b8e33ae814b&imgtype=0&src=http%3A%2F%2Fpic7.iqiyipic.com%2Fimage%2F20181130%2F6f%2Fc3%2Fv_121987361_m_601_m1_480_360.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-04-20</h4>
+          <p>天行九歌 </p>
+          <p>（动漫《天行九歌》</p>
+          <p>同名主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225672905&di=ac50bed9206b8c45dca3421f6baeb617&imgtype=0&src=http%3A%2F%2Fp1.v.17173cdn.com%2Fvw0tha%2FYWxqaGBf%2Fuploads%2Fimages%2Fvideo%2F20160304%2F32521496_0.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-02-06</h4>
+          <p>春宴</p>
+          <p>（2016辽宁卫视</p>
+          <p>春节联欢晚会演绎曲目）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225822247&di=35540e7e97996ed15f950168c525b6e4&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D4023115173%2C1977120445%26fm%3D214%26gp%3D0.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-02-01</h4>
+          <p>梨花落</p>
+          <p>（电视剧</p>
+          <p>《寂寞空庭春欲晚》插曲）</p>
+        </div>
+      </div>
+      <div class="column 2016">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546225900079&di=12f577806ff4324e649626c745616f53&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F4cae1863628e6ba41aa9da1ef38749a86a3464c6.jpg" alt="2016" style="width:auto; height:220px;">
+          <h4>2016-02-01</h4>
+          <p>惜春词</p>
+          <p>（电视剧</p>
+          <p>《寂寞空庭春欲晚》插曲）</p>
+        </div>
+      </div>
+     
+    
+    
+      <div class="column 2015">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546226044625&di=e6f53acb2f9b30e8d6c9d8af520b426e&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farchive%2F331947094af8ca1294a81201c466be26661bba40.jpg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-11-06</h4>
+          <p>伊人如梦</p>
+          <p>（电视剧</p>
+          <p>《芈月传》片尾曲）</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d997218150fbb2fb202650402e234bc1/8cb1cb13495409235d2d4aa29758d109b2de49a1.jpg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-07-02</h4>
+          <p>之子于归</p>
+          <p>（电视剧</p>
+          <p>《绝爱之城之华胥引》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="http://b-ssl.duitang.com/uploads/item/201508/30/20150830214645_uE5LZ.thumb.700_0.jpeg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-05-11</h4>
+          <p>蝶</p>
+          <p>专辑</p>
+          <p>《天韵·霍尊》</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="http://i1.hdslb.com/bfs/archive/4ad363d9d2cdaa53caee3b2894d88b6e0a8e090d.jpg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-05-01</h4>
+          <p>不送帖</p>
+          <p>电视剧</p>
+          <p>《钟馗捉妖记》主题曲</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="http://b-ssl.duitang.com/uploads/item/201703/10/20170310215318_VLrUX.jpeg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-04-25</h4>
+          <p>木棉</p>
+          <p>专辑</p>
+          <p>《天韵·霍尊》</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546226302206&di=a47aff5b0b255737e847846f439ad8e9&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D88591518%2C1050010994%26fm%3D214%26gp%3D0.jpg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-02-17</h4>
+          <p>东风引</p>
+          <p>（2015辽宁卫视</p>
+          <p>春节联欢晚会演绎曲目）</p>
+        </div>
+      </div>
+      <div class="column 2015">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546226406815&di=2e74522e082a94f08fe3c6e93a63a79d&imgtype=0&src=http%3A%2F%2Fpu.u4u5.com%2Fuploads%2Fother%2F20150213%2FImg408981843.jpg" alt="2015" style="width:auto; height:220px;">
+          <h4>2015-02-08</h4>
+          <p>唐诗 （央视节目</p>
+          <p>《一次旅行一首歌》</p>
+          <p>第5期寻找长安主题曲）</p>
+        </div>
+      </div>
+      
+      
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://cdnimg103.lizhi.fm/audio_cover/2016/03/09/26986057992352391_320x320.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-11-14</h4>
+          <p>花雅禅</p>
+          <p>（舞剧</p>
+          <p>《梅兰芳》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3938269239,4137759818&fm=26&gp=0.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-10-14</h4>
+          <p>玫瑰堡垒</p>
+          <p>（电影《深夜前的</p>
+          <p>五分钟》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546221510943&di=deb266cd7ac0eb855d5416fd0f79a161&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F123%2F195%2F1665%2F108316473.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-07-27</h4>
+          <p>玉佛传灯</p>
+          <p>（玉佛禅寺修缮</p>
+          <p>主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546220278713&di=9c6f4ac7c41349e6006ff288366690cc&imgtype=0&src=http%3A%2F%2Fi0.hexunimg.cn%2F2014-05-04%2F164470967.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-05-04</h4>
+          <p>对鸟</p>
+          <p>（电影《从哪来,</p>
+          <p>到哪去》主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546220110563&di=1746135fa479f14dd4334610164ef6f1&imgtype=0&src=http%3A%2F%2Fimage.game.uc.cn%2F2014%2F2%2F18%2F9634595_.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-03-17</h4>
+          <p>放开那三国 </p>
+          <p>（同名游戏</p>
+          <p>主题曲）</p>
+        </div>
+      </div>
+      <div class="column 2014">
+        <div class="content">
+          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1546219658727&di=6aa91fd61df2898cf2f37dce30f6d41c&imgtype=0&src=http%3A%2F%2Fimgcache.cjmx.com%2Fdrama%2F201511%2F20151127124329407.jpg" alt="2014" style="width:auto; height:220px;">
+          <h4>2014-01-03</h4>
+          <p>卷珠帘</p>
+          <p>（《中国好歌曲》</p>
+          <p>第一季冠军歌曲）</p>
+        </div>
+      </div>
+      
+      <div class="column 2013">
+        <div class="content">
+          <img src="https://gss3.bdstatic.com/7Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=039acd25309b033b3885f48874a75db6/6609c93d70cf3bc7488d1dcdd500baa1cd112a06.jpg" alt="2013" style="width:auto; height:220px;">
+          <h4>2013-02-08</h4>
+          <p>爷们儿干杯 </p>
+          <p>（2013辽宁卫视</p>
+          <p>春节联欢晚会演绎曲目,合唱:火风）</p>
+        </div>
+      </div>
+      <div class="column 2012">
+        <div class="content">
+          <img src="http://img0.imgtn.bdimg.com/it/u=946458810,2645285304&fm=214&gp=0.jpg" alt="2012" style="width:auto; height:220px;">
+          <h4>2012-09-20</h4>
+          <p>醒 </p>
+          <p>（《声动亚洲》</p>
+          <p>决赛歌曲）</p>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+    
+    <div class="footer">
+    <p id="from"><a href="https://www.weibo.com/u/6560149445?refer_flag=1005055010_" target="_blank">
+    <img id="foot"  src="https://vignette.wikia.nocookie.net/mira-miracle/images/3/36/Weibo_Logo.png/revision/latest?cb=20170828151411"></img>百景碧华_今古千岁</a></p>
+    </div>
+    
+</body>    
+    
+</html>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
